@@ -10,7 +10,7 @@ RAYLIB_PATH = /usr/local
 TARGET = main
 
 # Source files (add more if you have multiple source files)
-SOURCES = main.cpp Camera.cpp
+SOURCES = main.cpp Camera.cpp Player.cpp
 
 # Object files (automatically generated from source files)
 OBJECTS = $(SOURCES:.cpp=.o)
