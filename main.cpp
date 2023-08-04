@@ -55,19 +55,23 @@ int main()
         if(localplayer.animsCount)
         {
             localplayer.animFrameCounter++;
-            if(localplayer.animFrameCounter >= localplayer.current.frameCount) localplayer.animFrameCounter = 0;
-            
+            if(localplayer.animFrameCounter >= localplayer.current.frameCount)
+            {
+                localplayer.animFrameCounter = 0;
+            }
             UpdateModelAnimation(localplayer.model, localplayer.current, localplayer.animFrameCounter);
             localplayer.animPlaying = true;
         }
+
         BeginDrawing();
-
         ClearBackground(RAYWHITE);
-
         BeginMode3D(camManager.camera);
 
-        if(localplayer.drawMesh) DrawModel(localplayer.model, localplayer.characterPosition, 1.0f, WHITE);
-
+        if(localplayer.drawMesh)
+        { 
+            DrawModel(localplayer.model, localplayer.characterPosition, 1.0f, WHITE);
+        }
+        
         DrawGrid(10, 1.0f);         
         EndMode3D();
         EndDrawing();
